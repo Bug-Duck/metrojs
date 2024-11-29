@@ -5,7 +5,7 @@
 		"tsup": "^8.3.5"
 	},
 	"scripts": {
-		"build": "pnpm run --parallel=./packages/* build",
-		"dev": "pnpm run --parallel=./packages/* dev"
+		"build": "pnpm run --parallel --filter=./packages/* build",
+		"dev": "pnpm run --parallel --filter=./packages/* dev"
 	}
 }

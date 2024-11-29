@@ -1,15 +1,31 @@
 {
   "compilerOptions": {
-    "composite": true,
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "useDefineForClassFields": true,
+    "customConditions": ["dev"],
     "module": "ESNext",
-    "moduleResolution": "Node",
-    "target": "ESNext",
-    "allowJs": true,
-    "skipLibCheck": true
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+
+    /* Linting */
+    "strict": true,
+    "strictNullChecks": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": false, // 在 ESLint 中启用，以 warn 形式出现
+    "noUnusedParameters": false,
+    "noEmit": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@vue-motion/core": ["./packages/core/src"],
+      "@vue-motion/cliet": ["./packages/client/src"],
+      "@vue-motion/lib": ["./packages/lib/src"]
+    }
   },
-  "include": ["packages/**/*", "test", "tsup.config.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["packages/*/src", "extensions/*/src"],
+  "exclude": ["**/node_modules", "**/.*/", "**/dist", "**/template"]
 }
