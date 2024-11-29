@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ESNext",
+    "allowJs": true,
+    "skipLibCheck": true
+  },
+  "include": ["packages/**/*", "test", "tsup.config.ts"],
+  "exclude": ["node_modules", "dist"]
+}

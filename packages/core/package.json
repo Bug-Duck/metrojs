@@ -1,0 +1,19 @@
+{
+  "name": "@metrojs/core",
+  "version": "0.0.1",
+	"description": "Core library for MetroJS",
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch"
+	},
+	"author": "BugDuck Team",
+	"license": "MIT",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs",
+			"types": "./dist/index.d.ts"
+		}
+	},
+  "type": "module"
+}

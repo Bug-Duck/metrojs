@@ -1,0 +1,19 @@
+{
+  "name": "metrojs",
+  "version": "0.0.1",
+	"description": "A subway map drawing library for JavaScript ecosystem.",
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch"
+	},
+	"author": "BugDuck Team",
+	"license": "MIT",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs",
+			"types": "./dist/index.d.ts"
+		}
+	},
+  "type": "module"
+}
